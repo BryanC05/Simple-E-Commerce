@@ -1,9 +1,3 @@
-Berikut adalah draf file **`README.md`** yang profesional dan lengkap. File ini menggabungkan dokumentasi tugas **Back-End** dan **Front-End** menjadi satu kesatuan, sehingga memudahkan penguji untuk menilai proyek Anda.
-
-Silakan buat file baru bernama `README.md` di dalam folder proyek Anda (atau timpa file yang sudah ada), lalu salin kode di bawah ini.
-
------
-
 ````markdown
 # Insyst Test - Fullstack Developer Intern (Laravel)
 
