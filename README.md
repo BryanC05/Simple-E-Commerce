@@ -1,4 +1,3 @@
-````markdown
 # Insyst Test - Fullstack Developer Intern (Laravel)
 
 Repository ini berisi penyelesaian tugas tes coding untuk posisi **Back-End** dan **Front-End** Developer Intern di Insyst. Proyek ini dibangun menggunakan Framework Laravel dengan implementasi RESTful API dan tampilan antarmuka (Blade View).
