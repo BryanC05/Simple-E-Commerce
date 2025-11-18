@@ -45,10 +45,16 @@ class ProductController extends Controller
     // PUT: Update produk
     public function update(Request $request, $id)
     {
+        // 1. Cari produk berdasarkan ID
         $product = Product::find($id);
+        
+        // 2. Jika tidak ketemu, beri error 404
         if (!$product) return response()->json(['message' => 'Produk tidak ditemukan'], 404);
 
+        // 3. Update data sesuai input JSON
         $product->update($request->all());
+        
+        // 4. Kembalikan data terbaru
         return response()->json($product);
     }
 

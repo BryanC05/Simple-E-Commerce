@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Insyst Test</a>
+            <a class="navbar-brand" href="#">Bryan Chan - Insyst Test</a>
         </div>
     </nav>
 

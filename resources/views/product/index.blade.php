@@ -27,6 +27,10 @@
                 @endforeach
             </tbody>
         </table>
+
+<td>
+    <button class="btn btn-danger btn-sm" onclick="alert('Fitur hapus via web belum diminta di soal, tapi API-nya sudah siap!')">Hapus</button>
+</td>
     </div>
 </div>
 
