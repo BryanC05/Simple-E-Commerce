@@ -4,16 +4,16 @@ Repository ini berisi penyelesaian tugas tes coding untuk posisi **Back-End** da
 
 ## 📋 Fitur Utama
 
-### [cite_start]1. Back-End (RESTful API) [cite: 42, 53]
+### 1. Back-End (RESTful API) [cite: 42, 53]
 * **Manajemen Produk (CRUD):**
     * Melihat daftar produk.
     * Menambah produk baru.
     * Update data produk.
-    * [cite_start]Hapus produk (Soft Deletes)[cite: 47].
+    * Hapus produk (Soft Deletes)[cite: 47].
 * **Manajemen Transaksi:**
     * Mencatat pembelian produk.
-    * [cite_start]**Validasi Stok:** Transaksi ditolak jika stok kurang[cite: 63].
-    * [cite_start]**Otomatisasi:** Stok berkurang otomatis & Total harga terhitung otomatis saat transaksi sukses[cite: 63].
+    * **Validasi Stok:** Transaksi ditolak jika stok kurang[cite: 63].
+    * **Otomatisasi:** Stok berkurang otomatis & Total harga terhitung otomatis saat transaksi sukses[cite: 63].
 
 ### [cite_start]2. Front-End (Web View) [cite: 4]
 * Halaman daftar produk menggunakan **Bootstrap 5**.
