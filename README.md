@@ -124,7 +124,7 @@ Untuk melihat implementasi tampilan (UI):
 
 1.  Pastikan server berjalan (`php artisan serve`).
 2.  Buka browser dan kunjungi URL:
-    > **https://www.google.com/search?q=http://127.0.0.1:8000/products-view**
+    > **http://127.0.0.1:8000/products-view**
 
 ### Fitur Halaman Web:
 
