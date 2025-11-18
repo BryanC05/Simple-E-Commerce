@@ -1,66 +1,146 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Berikut adalah draf file **`README.md`** yang profesional dan lengkap. File ini menggabungkan dokumentasi tugas **Back-End** dan **Front-End** menjadi satu kesatuan, sehingga memudahkan penguji untuk menilai proyek Anda.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Silakan buat file baru bernama `README.md` di dalam folder proyek Anda (atau timpa file yang sudah ada), lalu salin kode di bawah ini.
 
-## About Laravel
+-----
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+````markdown
+# Insyst Test - Fullstack Developer Intern (Laravel)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Repository ini berisi penyelesaian tugas tes coding untuk posisi **Back-End** dan **Front-End** Developer Intern di Insyst. Proyek ini dibangun menggunakan Framework Laravel dengan implementasi RESTful API dan tampilan antarmuka (Blade View).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Fitur Utama
 
-## Learning Laravel
+### [cite_start]1. Back-End (RESTful API) [cite: 42, 53]
+* **Manajemen Produk (CRUD):**
+    * Melihat daftar produk.
+    * Menambah produk baru.
+    * Update data produk.
+    * [cite_start]Hapus produk (Soft Deletes)[cite: 47].
+* **Manajemen Transaksi:**
+    * Mencatat pembelian produk.
+    * [cite_start]**Validasi Stok:** Transaksi ditolak jika stok kurang[cite: 63].
+    * [cite_start]**Otomatisasi:** Stok berkurang otomatis & Total harga terhitung otomatis saat transaksi sukses[cite: 63].
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### [cite_start]2. Front-End (Web View) [cite: 4]
+* Halaman daftar produk menggunakan **Bootstrap 5**.
+* [cite_start]Integrasi **DataTables** untuk fitur search & pagination[cite: 11].
+* [cite_start]**Modal Form** untuk menambah produk (UI Interaction)[cite: 13].
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Teknologi yang Digunakan
 
-## Laravel Sponsors
+* **Framework:** Laravel 10
+* **Bahasa:** PHP 8.1+
+* **Database:** SQLite (untuk kemudahan testing tanpa konfigurasi server database berat)
+* **Frontend:** Bootstrap 5, jQuery, DataTables CDN
+* **Tools:** Postman (API Testing), VS Code
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🚀 Cara Instalasi & Menjalankan
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Ikuti langkah-langkah ini untuk menjalankan proyek di komputer lokal Anda:
 
-## Contributing
+### 1. Clone Repository / Extract Folder
+Pastikan Anda sudah berada di dalam folder proyek melalui terminal.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2. Install Dependencies
+```bash
+composer install
+````
 
-## Code of Conduct
+### 3\. Konfigurasi Environment & Database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Proyek ini dikonfigurasi menggunakan **SQLite**.
 
-## Security Vulnerabilities
+  * Salin file `.env.example` menjadi `.env`.
+  * Pastikan konfigurasi database di `.env` seperti ini:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<!-- end list -->
 
-## License
+```env
+DB_CONNECTION=sqlite
+DB_DATABASE_SQLITE="${PWD}/database/database.sqlite"
+# DB_HOST, DB_PORT, dst boleh dikosongkan/hapus
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+  * Buat file database kosong (jika belum ada):
+
+<!-- end list -->
+
+```bash
+touch database/database.sqlite
+```
+
+### 4\. Jalankan Migrasi
+
+Untuk membuat tabel `products` dan `transactions` serta mereset data:
+
+```bash
+php artisan migrate:fresh
+```
+
+### 5\. Jalankan Server
+
+```bash
+php artisan serve
+```
+
+Akses proyek di: `http://127.0.0.1:8000`
+
+-----
+
+## 📖 Dokumentasi API (Back-End)
+
+Gunakan Postman untuk menguji endpoint berikut:
+
+### 1\. Produk
+
+  * **GET** `/api/products` - Ambil semua data.
+  * **POST** `/api/products` - Tambah data.
+      * *Body (JSON):*
+        ```json
+        {
+            "name": "Laptop Gaming",
+            "price": 15000000,
+            "stock": 10
+        }
+        ```
+  * **PUT** `/api/products/{id}` - Edit data.
+  * **DELETE** `/api/products/{id}` - Hapus data (Soft delete).
+
+### 2\. Transaksi
+
+  * **POST** `/api/transactions`
+      * *Body (JSON):*
+        ```json
+        {
+            "product_id": 1,
+            "quantity": 2
+        }
+        ```
+      * [cite\_start]*Catatan:* Stok akan otomatis berkurang dan `total_price` akan dihitung oleh sistem[cite: 55, 63].
+
+-----
+
+## 🖥️ Akses Halaman Web (Front-End)
+
+Untuk melihat implementasi tampilan (UI):
+
+1.  Pastikan server berjalan (`php artisan serve`).
+2.  Buka browser dan kunjungi URL:
+    > **https://www.google.com/search?q=http://127.0.0.1:8000/products-view**
+
+### Fitur Halaman Web:
+
+  * [cite\_start]**Tabel:** Menampilkan data produk real-time dari database[cite: 5].
+  * [cite\_start]**DataTables:** Coba fitur "Search" di pojok kanan atas tabel[cite: 11].
+  * [cite\_start]**Tambah Produk:** Klik tombol **"+ Tambah Produk"** untuk memunculkan Modal Bootstrap[cite: 12, 13].
+
+-----
+
+## 👤 Author
+Bryan Chan
+Diselesaikan sebagai bagian dari Tes Masuk Insyst.
