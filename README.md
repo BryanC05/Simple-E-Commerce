@@ -1,65 +1,71 @@
 # Insyst Test - Fullstack Developer Intern (Laravel)
 
-Repository ini berisi penyelesaian tugas tes coding untuk posisi **Back-End** dan **Front-End** Developer Intern di Insyst. Proyek ini dibangun menggunakan Framework Laravel dengan implementasi RESTful API dan tampilan antarmuka (Blade View).
+This repository contains the coding test submission for the **Back-End** and **Front-End** Developer Intern positions at Insyst.
 
-## 📋 Fitur Utama
+## 📋 Key Features
 
-### 1. Back-End (RESTful API) [cite: 42, 53]
-* **Manajemen Produk (CRUD):**
-    * Melihat daftar produk.
-    * Menambah produk baru.
-    * Update data produk.
-    * Hapus produk (Soft Deletes)[cite: 47].
-* **Manajemen Transaksi:**
-    * Mencatat pembelian produk.
-    * **Validasi Stok:** Transaksi ditolak jika stok kurang[cite: 63].
-    * **Otomatisasi:** Stok berkurang otomatis & Total harga terhitung otomatis saat transaksi sukses[cite: 63].
+### 1\. Back-End (RESTful API)
 
-### [cite_start]2. Front-End (Web View) [cite: 4]
-* Halaman daftar produk menggunakan **Bootstrap 5**.
-* [cite_start]Integrasi **DataTables** untuk fitur search & pagination[cite: 11].
-* [cite_start]**Modal Form** untuk menambah produk (UI Interaction)[cite: 13].
+  * **Product Management (CRUD):**
+      * View product list.
+      * Add new products.
+      * Update product data.
+      * Delete products.
+  * **Transaction Management:**
+      * Record product purchases.
+      * **Stock Validation:** Transactions are rejected if there is insufficient stock.
+      * **Automation:** Stock is automatically deducted & Total price is automatically calculated upon a successful transaction.
 
----
+### 2\. Front-End (Web View)
 
-## 🛠️ Teknologi yang Digunakan
+  * Product list page using **Bootstrap 5**.
+  * **DataTables** integration for search & pagination features.
+  * **Modal Form** for adding products (UI Interaction).
 
-* **Framework:** Laravel 10
-* **Bahasa:** PHP 8.1+
-* **Database:** SQLite (untuk kemudahan testing tanpa konfigurasi server database berat)
-* **Frontend:** Bootstrap 5, jQuery, DataTables CDN
-* **Tools:** Postman (API Testing), VS Code
+### 3\. Proof of Successful Endpoints & Web View in the Screenshots Folder
 
----
+-----
 
-## 🚀 Cara Instalasi & Menjalankan
+## 🛠️ Technologies Used
 
-Ikuti langkah-langkah ini untuk menjalankan proyek di komputer lokal Anda:
+  * **Framework:** Laravel 10
+  * **Language:** PHP 8.1+
+  * **Database:** SQLite
+  * **Frontend:** Bootstrap 5, jQuery, DataTables CDN
+  * **Tools:** Postman (API Testing), VS Code
 
-### 1. Clone Repository / Extract Folder
-Pastikan Anda sudah berada di dalam folder proyek melalui terminal.
+-----
 
-### 2. Install Dependencies
+## 🚀 Installation & Setup
+
+Follow these steps to run the project on your local machine:
+
+### 1\. Clone Repository / Extract Folder
+
+Ensure you are inside the project folder via your terminal.
+
+### 2\. Install Dependencies
+
 ```bash
 composer install
-````
+```
 
-### 3\. Konfigurasi Environment & Database
+### 3\. Environment & Database Configuration
 
-Proyek ini dikonfigurasi menggunakan **SQLite**.
+This project is configured to use **SQLite**.
 
-  * Salin file `.env.example` menjadi `.env`.
-  * Pastikan konfigurasi database di `.env` seperti ini:
+  * Copy the `.env.example` file to `.env`.
+  * Ensure the database configuration in `.env` looks like this:
 
 <!-- end list -->
 
 ```env
 DB_CONNECTION=sqlite
 DB_DATABASE_SQLITE="${PWD}/database/database.sqlite"
-# DB_HOST, DB_PORT, dst boleh dikosongkan/hapus
+# DB_HOST, DB_PORT, etc. can be left empty/deleted
 ```
 
-  * Buat file database kosong (jika belum ada):
+  * Create an empty database file (if it doesn't exist yet):
 
 <!-- end list -->
 
@@ -67,44 +73,44 @@ DB_DATABASE_SQLITE="${PWD}/database/database.sqlite"
 touch database/database.sqlite
 ```
 
-### 4\. Jalankan Migrasi
+### 4\. Run Migrations
 
-Untuk membuat tabel `products` dan `transactions` serta mereset data:
+To create the `products` and `transactions` tables and reset data:
 
 ```bash
 php artisan migrate:fresh
 ```
 
-### 5\. Jalankan Server
+### 5\. Run Server
 
 ```bash
 php artisan serve
 ```
 
-Akses proyek di: `http://127.0.0.1:8000`
+Access the project at: `http://127.0.0.1:8000`
 
 -----
 
-## 📖 Dokumentasi API (Back-End)
+## 📖 API Documentation (Back-End)
 
-Gunakan Postman untuk menguji endpoint berikut:
+Use Postman to test the following endpoints:
 
-### 1\. Produk
+### 1\. Products
 
-  * **GET** `/api/products` - Ambil semua data.
-  * **POST** `/api/products` - Tambah data.
+  * **GET** `/api/products` - Fetch all data.
+  * **POST** `/api/products` - Add data.
       * *Body (JSON):*
         ```json
         {
-            "name": "Laptop Gaming",
+            "name": "Gaming Laptop",
             "price": 15000000,
             "stock": 10
         }
         ```
   * **PUT** `/api/products/{id}` - Edit data.
-  * **DELETE** `/api/products/{id}` - Hapus data (Soft delete).
+  * **DELETE** `/api/products/{id}` - Delete data (Soft delete).
 
-### 2\. Transaksi
+### 2\. Transactions
 
   * **POST** `/api/transactions`
       * *Body (JSON):*
@@ -114,26 +120,27 @@ Gunakan Postman untuk menguji endpoint berikut:
             "quantity": 2
         }
         ```
-      * [cite\_start]*Catatan:* Stok akan otomatis berkurang dan `total_price` akan dihitung oleh sistem[cite: 55, 63].
+      * *Note:* Stock will automatically decrease and `total_price` will be calculated by the system.
 
 -----
 
-## 🖥️ Akses Halaman Web (Front-End)
+## 🖥️ Web Page Access (Front-End)
 
-Untuk melihat implementasi tampilan (UI):
+To view the UI implementation:
 
-1.  Pastikan server berjalan (`php artisan serve`).
-2.  Buka browser dan kunjungi URL:
-    > **http://127.0.0.1:8000/products-view**
+1.  Ensure the server is running (`php artisan serve`).
+2.  Open your browser and visit the URL:
+    > **[http://127.0.0.1:8000/products-view](http://127.0.0.1:8000/products-view)**
 
-### Fitur Halaman Web:
+### Web Page Features:
 
-  * [cite\_start]**Tabel:** Menampilkan data produk real-time dari database[cite: 5].
-  * [cite\_start]**DataTables:** Coba fitur "Search" di pojok kanan atas tabel[cite: 11].
-  * [cite\_start]**Tambah Produk:** Klik tombol **"+ Tambah Produk"** untuk memunculkan Modal Bootstrap[cite: 12, 13].
+  * **Table:** Displays real-time product data from the database.
+  * **DataTables:** Try the "Search" feature in the top right corner of the table.
+  * **Add Product:** Click the **"+ Add Product"** button to open the Bootstrap Modal.
 
 -----
 
 ## 👤 Author
+
 Bryan Chan
-Diselesaikan sebagai bagian dari Tes Masuk Insyst.
+Completed as part of the Insyst Fullstack Web Dev Entry Test.
