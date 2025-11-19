@@ -29,12 +29,10 @@ class ProductController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        // Simpan ke database
         $product = Product::create($request->all());
         return response()->json($product, 201);
     }
 
-    // GET: Lihat 1 produk
     public function show($id)
     {
         $product = Product::find($id);

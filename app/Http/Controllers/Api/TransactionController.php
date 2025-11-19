@@ -25,15 +25,15 @@ class TransactionController extends Controller
         // 2. Ambil data produk
         $product = Product::find($request->product_id);
 
-        // 3. Cek apakah stok cukup [Soal: Validasi stok harus mencukupi]
+        // 3. Cek apakah stok cukup
         if ($product->stock < $request->quantity) {
             return response()->json(['message' => 'Stok barang tidak mencukupi'], 422);
         }
 
-        // 4. Hitung total harga [Soal: Total harga = quantity x price]
+        // 4. Hitung total harga
         $totalPrice = $product->price * $request->quantity;
 
-        // 5. Kurangi stok produk [Soal: Stok otomatis berkurang]
+        // 5. Kurangi stok produk
         $product->stock = $product->stock - $request->quantity;
         $product->save();
 
