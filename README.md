@@ -1,5 +1,3 @@
-# Fullstack Developer Intern (Laravel)
-
 ## 📋 Key Features
 
 ### 1\. Back-End (RESTful API)
@@ -139,6 +137,4 @@ To view the UI implementation:
 -----
 
 ## 👤 Author
-
 Bryan Chan
-Completed as part of the Insyst Fullstack Web Dev Entry Test.
