@@ -1,6 +1,4 @@
-# Insyst Test - Fullstack Developer Intern (Laravel)
-
-This repository contains the coding test submission for the **Back-End** and **Front-End** Developer Intern positions at Insyst.
+# Fullstack Developer Intern (Laravel)
 
 ## 📋 Key Features
 
